@@ -203,9 +203,9 @@ Goal is to maximize accumulated reward
 
 -   One way to find the policy is to optimize the expected return directly.
 -   We can rewrite `$R^\pi = \mathbb{E}_{\tau\sim\pi}\left[\sum_{t=0}^T\gamma^tr_t\right]$` as function of the policy:
+- `$R^{\pi_\theta} = \sum_{\tau\sim\pi} P(\tau|\theta)G_\tau$`
 - `$P(\tau|\theta) = P(s_0)\prod_{t=0}P(s_{t+1}|s_t,a_t)$`
 - `$G_\tau = \sum_{t=0}^T\gamma^tr_t$`
-- `$R^{\pi_\theta} = \sum_{\tau\sim\pi} P(\tau|\theta)G_\tau$`
 - `$\nabla_{\theta} R^{\pi_\theta} = \mathbb{E}_{\tau\sim\pi}\left[\sum_{t-0}^T\nabla_{\theta} log\pi(a_t|s_t)G_\tau\right]$`
 -   Now we can just take the derivative with respect to policy parameters and do gradient ascent to maximize this objective
 -   <mark>The trajectories came from the same policy that we are optimizing - cannot reuse old trajectories</mark>
