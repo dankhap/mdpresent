@@ -87,10 +87,6 @@
       <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-#### Unsupervised Reinforcement Learning Benchmark
-</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
-<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
-
 ## Unsupervised Reinforcement Learning Benchmark
 
 Methods of unsupervised pre-training for fast multi-task adaptation
@@ -108,13 +104,19 @@ Goal is to maximize accumulated reward
 ### Reinforcment Learning
 #### Achivements 
 
-<img src="Atari.png" alt="" style="width: .pngpx; object-fit: fill">
+<img src="Thesis/Presentations/images/Atari.png.png" alt="" style="width: .pngpx; object-fit: fill">
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-<img src="gettyimages-515343878.jpg" alt="" style="width: .webppx; object-fit: fill">
+### Reinforcment Learning
+#### Achivements 
+
+<img src="Thesis/Presentations/images/gettyimages-515343878.jpg.webp" alt="" style="width: .webppx; object-fit: fill">
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Reinforcment Learning
+#### Achivements 
 
 <img src="Thesis/Presentations/images/chat-gpt-header.jpg" alt="" style="object-fit: scale-down">
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
@@ -188,7 +190,7 @@ Goal is to maximize accumulated reward
 
 ### Reinforcement learning objective
 
-- The goal is to find a policy `$\pi$` that maximizes the expected discounted reward `$\mathbb{E}_{\tau\sim\pi}\left[\sum_{t=0}^T\gamma^tr_t\right]$`
+- The goal is to find a policy `$\pi:S\rightarrow A$` that maximizes the expected discounted reward `$\mathbb{E}_{\tau\sim\pi}\left[\sum_{t=0}^T\gamma^tr_t\right]$`
 -   Additional definitions:
     - `$Q^\pi(s,a)=\mathbb{E}_{\tau\sim\pi}\left[\sum_{t=0}^T\gamma^tr_t|s_0=s,a_0=a\right]$`
     - `$V^\pi(s)=\mathbb{E}_{\tau\sim\pi}\left[\sum_{t=0}^T\gamma^tr_t|s_0=s\right]$`
@@ -221,86 +223,19 @@ Goal is to maximize accumulated reward
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-<div class="has-light-background" style="background-color: white; padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
-
- <div class="block">
-
 ### On-Policy VS Off-Policy
-</div>
-
-
-</div>
-
-<div class="has-light-background" style="background-color: white; position: absolute; left: 44%; top: 15%; height: 75%; width: 43%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
-</div>
-
-<div class="" style="position: absolute; left: 3%; top: 15%; height: 70%; width: 64%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
-
-
-<div class="block">
 
 -   On policy methods such as policy gradient, need to throw away all trajectories collected, after policy update, and collect new policies
-</div>
-
-
-
-</div>
-
-<div class="" style="position: absolute; left: 70%; top: 17%; height: 71%; width: 26%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
-
-
-<div class="block">
 
 -   Off policy methods, such as Q-Learning, can reuse trajectories from old policy
     -   These methods use a replay buffer, which stores all trajectories, and is gradually updated as we improve the policy
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-<style>
-.horizontal_dotted_line{
-  border-bottom: 2px dotted gray;
-} 
-} 
-</style>
-
-<div class="horizontal_dotted_line" style="position: absolute; left: 3%; top: 94%; height: 0%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
-
-</div>
-
-<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 0%; top: 64%; height: 30%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end" align="left">
-
-<div class="block">
 
 -   This is why off policy methods considered more sample efficient
 -   This is why pre-training methods, where the goal is to be more sample efficient,  focus on this (We focus on DDPG which is a continuous Q-learning variant)
-</div>
-
-
-
-</div>
-
-<div class="" style="position: absolute; left: 0%; top: 94%; height: 6%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
-
-###### © 2022 Advanced Slides<!-- .element: style="font-weight: 300" -->
-</div>
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-Unsupervised Reinforcement Learning Benchmark
+### Unsupervised Reinforcement Learning Benchmark
 
 -   Unsupervised learning pretraining stage - environment without any reward
 -   Task fine-tuning stage - a set of tasks with a predefined reward
@@ -308,43 +243,42 @@ Unsupervised Reinforcement Learning Benchmark
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-Unsupervised Reinforcement Learning Benchmark
+### Unsupervised Reinforcement Learning Benchmark
 
 -   The benchmark tests on 4 environments with 4 tasks each
 -   There is a distinction between pixel and state based observations
 -   8 exploration algorithms are compared during pre-training stage
 -   The policy trained during pre-training is used for fine-tuning on the supervised task
-<img src="Thesis/Presentations/images/urlb_tasks.png" alt="" style="object-fit: scale-down">
-</div></script></section><section  data-markdown><script type="text/template">
-</script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+- We focus on ICM and RND algorithms as they performed the best
+<img src="Thesis/Presentations/images/urlb_tasks.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-ICM review
+### ICM review
 
 -   Intrinsic reward construction
 -   Predict state representation, learned from predicting action from consecutive states
 -   Inverse model to fight TV problem
 
-<img src="Thesis/Presentations/images/icm.jpg" alt="" style="object-fit: scale-down">
+<img src="Thesis/Presentations/images/icm.jpg" alt="" style="width: 1000px; object-fit: fill">
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-RND review
+### RND review
 
--   Reward definition:
+-   Reward definition: `$||\hat{f}(s_{t+1})-f(s_{t+1})||$`
 -   Predict random representation
--   Optimize   such that we minimize:
-    - this
+-   Optimize   such that we minimize the reward
 -   This objective is also the intrinsic reward
 -   First better then average human performance on ATARI Montezuma game
 
-<img src="Thesis/Presentations/images/rnd.png" alt="" style="width: 400px; object-fit: fill">
+<img src="Thesis/Presentations/images/rnd.png" alt="" style="width: 500px; object-fit: fill">
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
 RND review
 
-<img src="Thesis/Presentations/images/rnd_results.png" alt="" style="object-fit: scale-down">
+<img src="Thesis/Presentations/images/rnd_results.png" alt="" style="width: 1000px; object-fit: fill">
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -357,8 +291,9 @@ RE3 review
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-RE3 review
-<img src="Thesis/Presentations/images/re3_results.png" alt="" style="object-fit: scale-down">
+### RE3 review
+
+<img src="Thesis/Presentations/images/re3_results.png" alt="" style="width: 1000px; object-fit: fill">
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
@@ -372,10 +307,14 @@ Unsupervised Pretraining Setting
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-Preliminary results
+### Preliminary Thesis results
 
 -   Instead of transferring the policy, we transfer the data - pre-populate the replay buffer (Similar approach with known reward function)
 -   Further improve efficiency by doing more updates per step at start of training, and decrease updates per step as task learning progresses
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Thank You!
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
